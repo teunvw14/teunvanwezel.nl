@@ -22,6 +22,7 @@ header {
     font-size: larger;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -36,6 +37,7 @@ pages {
     width: fit-content;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
@@ -87,7 +89,7 @@ a:hover {
 img {
     width: auto;
     height: auto;
-    max-width: 80%;
+    max-width: 85%;
     max-height: 80vh;
     border: 20px solid whitesmoke;
     margin-top: 5vh;
