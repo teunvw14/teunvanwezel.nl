@@ -30,6 +30,8 @@ header {
 
 h1 {
     margin: 0;
+    margin-left: 40px;
+    margin-right: 40px;
     font-size: xxx-large;
 }
 
