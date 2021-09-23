@@ -6,6 +6,7 @@ body {
     justify-content: space-between;
     width: 100%;
     margin: 0%;
+    font-family: "Open Sans", serif;
 }
 
 body {
@@ -14,11 +15,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x:hidden;
 }
 
 header {
-    margin-top: 4%;
-    margin-bottom: 4%;
+    margin-top: 5vh;
+    margin-bottom: 4vh;
     font-size: larger;
     width: 100%;
     display: flex;
@@ -33,6 +35,22 @@ h1 {
     margin-left: 40px;
     margin-right: 40px;
     font-size: xxx-large;
+    animation: slide-in 1s cubic-bezier(0.1, 0.17, 0.49, 1.25) both;
+    animation-delay: 200ms;
+    font-family: 'Roboto Slab', serif;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+@keyframes slide-in {
+    0% { 
+        transform: translateX(-100vw);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 pages {
@@ -77,6 +95,11 @@ footer {
     align-items: center;
 }
 
+a {
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
 a:link,
 a:visited {
     color: #F5BF49;
@@ -88,12 +111,63 @@ a:hover {
     text-decoration: underline 3px;
 }
 
+page:hover a {
+    transform: translateY(-3px);
+    color: #F5E256;
+}
+
 img {
     width: auto;
+    min-width: 300px;
     height: auto;
+    min-height: 300px;
     max-width: 85%;
     max-height: 80vh;
     border: 20px solid whitesmoke;
     margin-top: 5vh;
     margin-bottom: 5vh;
+    background: center no-repeat url("https://upload.wikimedia.org/wikipedia/commons/b/b9/Youtube_loading_symbol_1_(wobbly).gif");
+}
+
+.snake_animation_container {
+    width: 100%;
+    height: 2vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    overflow-x:hidden;
+}
+
+.snake {
+    width: 25vw;
+    height: 100%;
+    animation: snake-animation 4s infinite linear backwards;
+}
+
+#snake1 {
+    background-color: #2B0F25;
+}
+
+#snake2 {
+    background-color: #33122B;
+}
+
+#snake3 {
+    background-color: #612252;
+}
+
+#snake4 {
+    background-color: #A13888;
+}
+
+@keyframes snake-animation {
+    0% {
+        transform: translateX(-100vw);
+    }
+    100% { 
+        transform: translateX(0);
+    }
 }
